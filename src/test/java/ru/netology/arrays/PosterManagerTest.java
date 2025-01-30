@@ -33,10 +33,10 @@ public class PosterManagerTest {
 
         manager.addMovie("Бладшот");
         manager.addMovie("Вперед");
-        manager.addMovie("Отель Белград");// исправить название
+        manager.addMovie("Отель\"Белград\"");
 
         String[] actual = manager.findAll();
-        String[] expected = {"Бладшот", "Вперед", "Отель Белград"};
+        String[] expected = {"Бладшот", "Вперед", "Отель\"Белград\""};
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -47,12 +47,12 @@ public class PosterManagerTest {
 
         manager.addMovie("Бладшот");
         manager.addMovie("Вперед");
-        manager.addMovie("Отель Белград");// исправить название
+        manager.addMovie("Отель\"Белград\"");
         manager.addMovie("Джентельмены");
         manager.addMovie("Человек-невидимка");
 
         String[] actual = manager.findLast();
-        String[] expected = {"Человек-невидимка", "Джентельмены", "Отель Белград", "Вперед", "Бладшот"};
+        String[] expected = {"Человек-невидимка", "Джентельмены", "Отель\"Белград\"", "Вперед", "Бладшот"};
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -63,13 +63,13 @@ public class PosterManagerTest {
 
         manager.addMovie("Бладшот");
         manager.addMovie("Вперед");
-        manager.addMovie("Отель Белград");// исправить название
+        manager.addMovie("Отель\"Белград\"");
         manager.addMovie("Джентельмены");
         manager.addMovie("Человек-невидимка");
         manager.addMovie("Тролли. Мировой тур");
 
         String[] actual = manager.findLast();
-        String[] expected = {"Тролли. Мировой тур", "Человек-невидимка", "Джентельмены", "Отель Белград", "Вперед"};
+        String[] expected = {"Тролли. Мировой тур", "Человек-невидимка", "Джентельмены", "Отель\"Белград\"", "Вперед"};
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -80,11 +80,11 @@ public class PosterManagerTest {
 
         manager.addMovie("Бладшот");
         manager.addMovie("Вперед");
-        manager.addMovie("Отель Белград");// исправить название
+        manager.addMovie("Отель\"Белград\"");
         manager.addMovie("Джентельмены");
 
         String[] actual = manager.findLast();
-        String[] expected = {"Джентельмены", "Отель Белград", "Вперед", "Бладшот"};
+        String[] expected = {"Джентельмены", "Отель\"Белград\"", "Вперед", "Бладшот"};
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -95,10 +95,10 @@ public class PosterManagerTest {
 
         manager.addMovie("Бладшот");
         manager.addMovie("Вперед");
-        manager.addMovie("Отель Белград");// исправить название
+        manager.addMovie("Отель\"Белград\"");
 
         String[] actual = manager.findLast();
-        String[] expected = {"Отель Белград", "Вперед", "Бладшот"};
+        String[] expected = {"Отель\"Белград\"", "Вперед", "Бладшот"};
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -109,11 +109,11 @@ public class PosterManagerTest {
 
         manager.addMovie("Бладшот");
         manager.addMovie("Вперед");
-        manager.addMovie("Отель Белград");// исправить название
+        manager.addMovie("Отель\"Белград\"");
         manager.addMovie("Джентельмены");
 
         String[] actual = manager.findLast();
-        String[] expected = {"Джентельмены", "Отель Белград", "Вперед"};
+        String[] expected = {"Джентельмены", "Отель\"Белград\"", "Вперед"};
 
         Assertions.assertArrayEquals(expected, actual);
     }
