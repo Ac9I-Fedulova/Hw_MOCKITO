@@ -1,8 +1,10 @@
 package ru.netology.arrays;
 
 public class PosterManager {
+    // Movie mov = new Movie();
 
-    private String[] movies = new String[0];
+    // private String[] movies = new String[0];
+    private Movie[] movies = new Movie[0];
     private int limit;
 
     public PosterManager() {
@@ -13,8 +15,8 @@ public class PosterManager {
         this.limit = limit;
     }
 
-    public void addMovie(String movie) {
-        String[] tmp = new String[movies.length + 1];
+    public void addMovie(Movie movie) {
+        Movie[] tmp = new Movie[movies.length + 1];
         for (int i = 0; i < movies.length; i++) {
             tmp[i] = movies[i];
         }
@@ -22,18 +24,18 @@ public class PosterManager {
         movies = tmp;
     }
 
-    public String[] findAll() {
+    public Movie[] findAll() {
         return movies;
     }
 
-    public String[] findLast() {
+    public Movie[] findLast() {
         int resultLength;
         if (movies.length < limit) {
             resultLength = movies.length;
         } else {
             resultLength = limit;
         }
-        String[] tmp = new String[resultLength];
+        Movie[] tmp = new Movie[resultLength];
         for (int i = 0; i < tmp.length; i++) {
             tmp[i] = movies[movies.length - 1 - i];
         }
